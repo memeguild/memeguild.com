@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.meme {
+    font-size: 100px;
+    white-space: nowrap;
+}
+
+.meme__emoji {
+    display: inline-block;
+    animation: 3s spin linear infinite;
+}
+
+.meme__emoji--reverse {
+    animation: 3s spin-reverse linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-reverse {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
